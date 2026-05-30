@@ -10,7 +10,7 @@
 /* --- settings --- */
 
 #define NAME      "tlv"
-#define STD       "c23"
+#define STD       "c2x"
 #define CC        "gcc"
 #define BUILD_DIR ".build"
 #define SRC_DIR   "src"
