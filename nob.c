@@ -168,6 +168,7 @@ static bool cmd_build(void) {
 }
 
 static bool cmd_test(void) {
+	if (!nob_mkdir_if_not_exists(BUILD_DIR)) return false;
 	if (!nob_mkdir_if_not_exists(BUILD_DIR "/tests")) return false;
 
 	Nob_File_Paths srcs = {0};
