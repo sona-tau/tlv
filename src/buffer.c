@@ -1,5 +1,7 @@
 #include "buffer.h"
 #include "prelude.h"
+#include <stdio.h>
+#include <string.h>
 
 
 Buffer buf_append(Buffer base, Buffer after) {

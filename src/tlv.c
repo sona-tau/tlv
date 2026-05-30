@@ -3,6 +3,8 @@
 #include "prelude.h"
 #include <stdlib.h>
 #include <arpa/inet.h>
+#include <stdio.h>
+#include <string.h>
 
 #define simple_serialize(val, type) do {                                       \
 	Byte* _b = malloc(1     /* type */                                         \

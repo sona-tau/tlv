@@ -36,7 +36,7 @@ Multiple frames can be concatenated into a single stream and sent in one `write(
 | `T_TIM`  | `Timestamp`   | Unix timestamp (`int64_t`)           |
 | `T_CHR`  | `Codepoint`   | Unicode codepoint (UTF-32, `uint32_t`) |
 
-## Quick start
+## Usage
 
 ### Sending
 
@@ -103,6 +103,11 @@ The `nob` binary recompiles itself automatically when `nob.c` changes.
 
 ## Ownership rules
 
-- `serialize*()` and `buf_append()` return an **owned** `Buffer` — call `free(buf.bytes)` when done.
-- `deserialize()` returns an **owned** `Message*` array — call `message_free()` on each element, then `da_free()`.
-- `message_cstr()` returns a **heap-allocated** `char*` — call `free()` when done.
+Remember this !!!
+
+- `serialize*()` and `buf_append()` return an **owned** `Buffer`
+    - call `free(buf.bytes)` when done.
+- `deserialize()` returns an **owned** `Message*` array
+    - call `message_free()` on each element, then `da_free()`.
+- `message_cstr()` returns a **heap-allocated** `char*`
+    - call `free()` when done.

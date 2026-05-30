@@ -19,7 +19,7 @@
 ///   da_free(nums);
 /// @endcode
 ///
-/// @note @p arr must always be a typed pointer variable — many macros may
+/// @note @p arr must always be a typed pointer variable; many macros may
 ///       reassign it when a reallocation moves the underlying block.
 
 /// @brief Internal metadata stored immediately before the data pointer.
@@ -37,7 +37,7 @@ void* copy_header(void *arr, size_t elem_size);
 /// @endcond
 
 // ---------------------------------------------------------------------------
-// Lifecycle
+// Lifecycle from README.md
 // ---------------------------------------------------------------------------
 
 /// @brief Allocate a new empty dynamic array.
@@ -72,7 +72,7 @@ void* copy_header(void *arr, size_t elem_size);
 #define da_copy(arr) copy_header((void*)(arr), sizeof(*(arr)))
 
 // ---------------------------------------------------------------------------
-// Adding elements
+// Adding elements from README.md
 // ---------------------------------------------------------------------------
 
 /// @brief Append a single element to the end of the array.
@@ -134,7 +134,7 @@ void* copy_header(void *arr, size_t elem_size);
 	} while (0)
 
 // ---------------------------------------------------------------------------
-// Removing elements
+// Removing elements from README.md
 // ---------------------------------------------------------------------------
 
 /// @brief Remove and return the last element.
@@ -170,7 +170,7 @@ void* copy_header(void *arr, size_t elem_size);
 #define da_clear(arr) do { da_header(arr)->count = 0; } while (0)
 
 // ---------------------------------------------------------------------------
-// Accessing elements
+// Accessing elements from README.md
 // ---------------------------------------------------------------------------
 
 /// @brief Bounds-checked element access via @c assert.
@@ -187,7 +187,7 @@ void* copy_header(void *arr, size_t elem_size);
 #define da_last(arr) (arr)[da_header(arr)->count - 1]
 
 // ---------------------------------------------------------------------------
-// Inspecting state
+// Inspecting state from README.md
 // ---------------------------------------------------------------------------
 
 /// @brief Number of elements currently stored.
